@@ -1,3 +1,4 @@
+/*faturamento X cliente */
 WITH faturamento_cliente AS ( 
   SELECT 
     cliente, 
@@ -6,6 +7,7 @@ FROM prefab-fabric-462023-n0.estudos_sql.vendas
 GROUP BY cliente
 ),
 
+/*ranking de faturamento X cliente*/
 ranking AS (
   SELECT
     cliente,
@@ -15,6 +17,7 @@ ranking AS (
   FROM faturamento_cliente
 )
 
+/*ranking de pareto com faturamento individual e acumulado por cliente */
 SELECT
   cliente,
   faturamento,
