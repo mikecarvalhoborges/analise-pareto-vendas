@@ -1,8 +1,9 @@
 # analise-pareto-vendas
 Análise de Pareto | Faturamento por Cliente
+Projeto de análise exploratória com foco em identificar a concentração de faturamento por cliente, aplicando o Princípio de Pareto (80/20).
 
 Objetivo: 
-Identificar quais clientes concentram a maior parte da receita, aplicando o princípio de Pareto (80/20).
+Identificar quais clientes são responsáveis pela maior parcela da receita total, avaliando o nível de concentração do faturamento e possíveis riscos de dependência comercial.
 
 Tecnologias utilizadas:
 - Google BigQuery (SQL);
@@ -13,17 +14,24 @@ Tecnologias utilizadas:
 Metodologia:
 - Cálculo do faturamento por cliente;
 - Ordenação decrescente por receita;
-- Cálculo do faturamento acumulado;
-- Cálculo do percentual acumulado;
-- Construção do gráfico de Pareto.
+- Cálculo do faturamento acumulado (Window Function);
+- Cálculo do percentual acumulado (%);
+- Construção do gráfico de Pareto no Google Sheets.
 
 Resultado:
-O gráfico evidencia que aproximadamente 80% da receita está concentrada nos principais clientes, indicando alta concentração de faturamento.
+A análise demonstrou que aproximadamente 80% da receita está concentrada em um grupo reduzido de clientes, evidenciando um cenário de alta concentração de faturamento.
 
 Insights:
 - Forte dependência de poucos clientes;
-- Possível risco de concentração;
-- Oportunidade de diversificação da base.
+- Potencial risco financeiro em caso de churn;
+- Oportunidade de diversificação da base;
+- Possível priorização estratégica dos clientes mais relevantes.
+
+Aprendizados  Técnicos:
+- Aplicação prática de Windoe Functions;
+- Cálculo de métricas acumuladas;
+- Construção de análise de concentração;
+- Integração entre SQL e visualização externa.
 
 Query principal:
   ```
