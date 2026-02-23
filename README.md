@@ -62,3 +62,6 @@ Query principal:
   FROM ranking
   ORDER BY faturamento DESC;
 ```
+## Visualização do Dashboard
+
+![Gráfico de Pareto](dashboard/grafico_pareto.png)
