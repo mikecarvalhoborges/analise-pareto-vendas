@@ -1,4 +1,8 @@
 # analise-pareto-vendas
+![SQL](https://img.shields.io/badge/SQL-BigQuery-blue)
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Pareto-orange)
+![Status](https://img.shields.io/badge/Project-Portfolio-green)
+
 Análise de Pareto | Faturamento por Cliente
 Projeto de análise exploratória com foco em identificar a concentração de faturamento por cliente, aplicando o Princípio de Pareto (80/20).
 
@@ -102,4 +106,4 @@ WHERE perc_acumulado <= 0.8;
 
 ## Métrica-chave
 
-Número de clientes responsáveis por 80% da receita: **4 clientes**
+Número de clientes responsáveis por 80% da receita: **3 clientes**
