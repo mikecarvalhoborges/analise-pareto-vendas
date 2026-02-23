@@ -64,4 +64,7 @@ Query principal:
 ```
 ## Visualização do Dashboard
 
-![Gráfico de Pareto](dashboard/grafico_pareto.png)
+![Gráfico](dashboard/grafico_pareto.png)
+
+Dashboard interativo:
+[Google Sheets](https://docs.google.com/spreadsheets/d/1rWbaohZBzy_2T3wD9Fjx3mnWA6TN_zzDHfN8I_y8YlY/edit?usp=sharing)
