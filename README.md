@@ -68,3 +68,38 @@ Query principal:
 
 Dashboard interativo:
 [Google Sheets](https://docs.google.com/spreadsheets/d/1rWbaohZBzy_2T3wD9Fjx3mnWA6TN_zzDHfN8I_y8YlY/edit?usp=sharing)
+
+Query extra (quantos clientes fazem 80%):
+
+```
+WITH faturamento_cliente AS ( 
+  SELECT 
+    cliente, 
+    SUM(quantidade * preco_unit) AS faturamento
+  FROM `prefab-fabric-462023-n0.estudos_sql.vendas`
+  GROUP BY cliente
+),
+
+ranking AS (
+  SELECT
+    cliente,
+    faturamento,
+    SUM(faturamento) OVER() AS total,
+    SUM(faturamento) OVER(ORDER BY faturamento DESC) AS acumulado
+  FROM faturamento_cliente
+),
+
+percentual AS (
+  SELECT *,
+    acumulado / total AS perc_acumulado
+  FROM ranking
+)
+
+SELECT COUNT(*) AS clientes_ate_80
+FROM percentual
+WHERE perc_acumulado <= 0.8;
+```
+
+## Métrica-chave
+
+Número de clientes responsáveis por 80% da receita: **4 clientes**
